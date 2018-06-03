@@ -110,7 +110,7 @@ var vm = new Vue( {
 
                         if ( result_db[ key ] ) {
                             
-                            if ( this.labels[ i ] === 'Name Project' ) this.template[ key ] = '<td class="bg-danger text-white"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="bg-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
+                            if ( this.labels[ i ] === 'Name Project' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
                             else {
                                 switch(this.labels[ i ]) {
                                     case 'FTP Server':
@@ -123,18 +123,18 @@ var vm = new Vue( {
                                     case 'DB Server':
                                     case 'DB User':
                                     case 'DB Pass':
-                                        this.template[ key ] = '<td class="bg-secondary text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-secondary text-white">' + result_db[ key ] + '</td>';
+                                        this.template[ key ] = '<td class="alert alert-dark"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-dark">' + result_db[ key ] + '</td>';
                                     break;
 
                                     case 'CMS User':
                                     case 'CMS Pass':
-                                        this.template[ key ] = '<td class="bg-success text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-success text-white">' + result_db[ key ] + '</td>';
+                                        this.template[ key ] = '<td class="alert alert-success"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-success">' + result_db[ key ] + '</td>';
                                     break;
 
                                     case 'HOST Url':
                                     case 'HOST User':
                                     case 'HOST Pass':
-                                        this.template[ key ] = '<td class="bg-info text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-info text-white">' + result_db[ key ] + '</td>';
+                                        this.template[ key ] = '<td class="alert alert-info"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-info">' + result_db[ key ] + '</td>';
                                     break;
                                 }
                             }
