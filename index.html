@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>keys accesses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body, html { height: 100%; }
+        body { opacity: 0; transition: opacity .1s;}
+        .trans { -webkit-transition: .3s; -moz-transition: .3s; -ms-transition: .3s; -o-transition: .3s; transition: .3s; }
+        .search__btn:not(:last-child) {border-right: 1px solid rgba(0,0,0,.15); }
+        .search__btn:hover,
+        .btn_add:hover {cursor: pointer; }
+    </style>
+</head>
+
+<body class="bg-secondary">
+    <div class="container-fluid bg-info text-white py-3" id="translit">
+        <div class="container">
+            <div class="input-group">
+                <input class="form-control trans" type="text" id="inText" placeholder="cyrilic string to url translation..." v-model="inText" v-bind:value="translitToURL">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pb-5">
+        <div id="app" class="container">
+            <form class="py-3" v-on:submit.prevent="searchAccess">
+                <div class="input-group w-100 justify-content-end">
+
+                    <input type="search" id="search" list="search_answers" class="form-control trans w-50" type="text" placeholder="Search" aria-label="Username" aria-describedby="search__btn" autocomplete="off" v-model="searchValue">
+                    <span class="input-group-addon search__btn" id="search__btn" v-on:click="searchAccess"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAt1BMVEUAAACSkpKSkpKTk5OcnJyTk5OSkpKPj4+VlZWWlpaXl5eRkZGTk5OYmJifn5+SkpKSkpKfn5+cnJySkpKUlJSVlZWXl5eKioqZmZmbm5uNjY2enp6jo6ORkZGOjo6hoaGbm5uWlpaRkZGXl5ehoaGRkZGioqKXl5eRkZGQkJCTk5OJiYmTk5OTk5OkpKSMjIympqacnJy6urq5ubnGxsaSkpKRkZGOjo6KioqHh4eEhISDg4OVlZXrdlLVAAAANXRSTlMAMfiGMvR4cywV7sKmd3BnWVZLS0ZAOTAmAvvu5+bi4eDg3tXSysC/vZiWhF5RTkcpIRoVCUU8KwQAAACrSURBVBjTfc3XDoJAEIVhlN4FBMTee9eZpfj+z6VxYaIheq7+fMnsCr+XeOZ07X9by2AIiJPgw3ZZ19Z0SUwzh8wr5vo7LqM8rFCW72Vdi371INp0tGERjwV2CENUeAxAJ9RA5GGiRtgGlYfPREKLSWX12K2sc76km3TMv5KM9EhHTsa2QXywGHsMY9LTDBEAV3sZmg2BFimi+vqj0SSl/VFQ6grgCrWpbvIEfRQP5JUF2oMAAAAASUVORK5CYII=" alt=""></span>
+
+                    <datalist id="search_answers" class="search_answers list-unstyled" v-if="isAnswerRezult">
+                        <option class="search_answers__item" v-for="answer in listMatchWithSearch" v-html="answer"></option>
+                    </datalist>
+                </div>
+            </form>
+            
+            <div class="text-right my-3">
+                <button class="btn btn-warning mr-2" data-toggle="collapse" data-target="#collapseExport" aria-expanded="false" aria-controls="collapseExport" v-on:click="exportAccesses">Export</button>
+                <button class="btn btn-info mr-2" data-toggle="collapse" data-target="#collapseImport" aria-expanded="false" aria-controls="collapseImport">Import</button>
+                <button class="btn btn-success" data-toggle="collapse" data-target="#collapseAdd" aria-expanded="false" aria-controls="collapseAdd">Add new Access</button>
+            </div>
+
+            <div class="bg-light bd-callout-info text-gray-dark p-3 mb-3" id="result" v-if="isResult">
+                <ul class="list-unstyled">
+                    <li v-for="temp in template" v-html="temp"></li>
+                </ul>
+            </div>
+            <div class="alert alert-danger text-center" role="alert" v-if="hasSearchError">
+                <button type="button" class="close" v-on:click="hasSearchError = !hasSearchError" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{message.notResult}}
+            </div>
+            
+            <div id="collapseExport" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <h3 class="text-white bg-dark p-3">Export Access</h3>
+                <div class="card-body bg-light text-gray-dark">
+                    <textarea class="w-100 p-2 text-secondary js-copytextarea" id="exporttArea" rows="15"></textarea>
+                    <div class="text-right mt-3">
+                        <button type="button" class="btn btn-primary btn-lg trans btn_add px-5 js-textareacopybtn" v-on:click="copyToClipboard('.js-copytextarea')">Copy</button>
+                        <a href="#" class="btn btn-primary btn-lg trans btn_add px-5 ml-2" v-on:click="saveFile">Save as file</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="collapseImport" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <h3 class="text-white bg-dark p-3">Import Access</h3>
+                <div class="card-body bg-light text-gray-dark">
+                    <form v-on:submit.prevent="importAccesses">
+                        <textarea class="w-100 p-2 text-secondary" id="importArea" rows="15" placeholder="Paste the data here  in the JSON format"></textarea>
+                        <div class="text-right mt-3">
+                            <input type="file" id="file-input" v-on:change="readFile($event)" />
+                            <button type="reset" class="btn btn-danger btn-lg btn_add px-4 mr-3" v-on:click="resetField('#importArea')">Reset</button>
+                            <button type="submit" class="btn btn-primary btn-lg trans btn_add px-5">Import to storage</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="collapseAdd" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <h3 class="text-white bg-dark p-3">Add New Access</h3>
+                <div class="card-body bg-light text-gray-dark">
+                    <form v-on:submit.prevent="addAccess">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" v-model.trim="project.name" placeholder="Name Project">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="domain_url" class="col-sm-2 col-form-label">Domain Url</label>
+                            <div class="col-sm-10">
+                                <input type="url" class="form-control" id="domain_url" v-model.trim="project.domain_url" placeholder="https://www">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4 class="mb-3"><strong>FTP</strong></h4>
+                                <div class="form-group row">
+                                    <label for="server" class="col-sm-2 col-form-label">Server</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="server" v-model.trim="project.server" placeholder="Server">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="user" class="col-sm-2 col-form-label">User</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user" v-model.trim="project.user" placeholder="User">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password" class="col-sm-2 col-form-label">Pass</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="password" v-model.trim="project.password" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4 class="mb-3"><strong>DB</strong></h4>
+                                <div class="form-group row">
+                                    <label for="name_db" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name_db" v-model.trim="project.name_db" placeholder="Name DB">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="server_db" class="col-sm-2 col-form-label">Server</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="server_db" v-model.trim="project.server_db" placeholder="Server" value="localhost">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="user_db" class="col-sm-2 col-form-label">User</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_db" v-model.trim="project.user_db" placeholder="User">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password_db" class="col-sm-2 col-form-label">Pass</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="password_db" v-model.trim="project.password_db" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-5 mb-5">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4 class="mb-3"><strong>CMS</strong></h4>
+                                <div class="form-group row">
+                                    <label for="user_cms" class="col-sm-2 col-form-label">User</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_cms" v-model.trim="project.user_cms" placeholder="User">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password_cms" class="col-sm-2 col-form-label">Pass</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="password_cms" v-model.trim="project.password_cms" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4 class="mb-3"><strong>Hosting</strong></h4>
+                                <div class="form-group row">
+                                    <label for="domain_host" class="col-sm-2 col-form-label">Domain</label>
+                                    <div class="col-sm-10">
+                                        <input type="url" class="form-control" id="domain_host" v-model.trim="project.domain_host" placeholder="https://www">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="user_host" class="col-sm-2 col-form-label">User</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_host" v-model.trim="project.user_host" placeholder="User">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password_host" class="col-sm-2 col-form-label">Pass</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="password_host" v-model.trim="project.password_host" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-right">
+                            <button type="reset" class="btn btn-danger btn-lg btn_add px-4 mr-3" v-on:click="resetFields">Reset</button>
+                            <button type="submit" class="btn btn-primary btn-lg trans btn_add px-5" v-bind:class="{ 'btn-success': isStateSuccess }">{{lableBtn}}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- <script src="js/vue.js"></script> -->
+    <!-- <script src="https://unpkg.com./vue"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="js/transliteration.min.js"></script> <!-- https://www.npmjs.com/package/transliteration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.0/vue.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+</body>
+
+</html>
