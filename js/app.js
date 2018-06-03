@@ -109,8 +109,8 @@ var vm = new Vue( {
                     for ( var key in result_db ) {
 
                         if ( result_db[ key ] ) {
-                            
-                            if ( this.labels[ i ] === 'Name Project' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
+                            console.log(result_db[key]);
+                            if ( this.labels[ i ] === 'Domain Url' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
                             else {
                                 switch(this.labels[ i ]) {
                                     case 'FTP Server':
@@ -136,9 +136,13 @@ var vm = new Vue( {
                                     case 'HOST Pass':
                                         this.template[ key ] = '<td class="alert alert-info"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-info">' + result_db[ key ] + '</td>';
                                     break;
+
+                                    default:
+                                       this.template[ key ] = '<td class="alert alert-primary"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-primary">' + result_db[ key ] + '</td>'; 
+                                    break;
                                 }
                             }
-                            
+
                         }
                         i++;
                     }
