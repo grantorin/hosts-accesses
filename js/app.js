@@ -20,7 +20,11 @@ var vm = new Vue( {
         importArea: '',
         searchValue: '',
         searchAnswers: [],
-        listAccesses: getListAccess(),
+        listAccesses: (function() {
+                    var arr = [];
+                    for ( var access in localStorage ) arr.push( access );
+                    return arr;
+                })(),
         project: {
             name: '',
             domain_url: '',
@@ -73,7 +77,7 @@ var vm = new Vue( {
     },
     methods: {
         addAccess: function() {
-            if ( isExistAccess( this.project.name ) ) {
+            if ( this.isExistAccess( this.project.name ) ) {
                 if ( !confirm( 'Access with the name { ' + this.project.name + ' } exists, overwrite it?' ) ) return;
                 localStorage.setItem( this.project.name, JSON.stringify( this.project ) );
                 this.listAccesses = getListAccess();
@@ -86,7 +90,7 @@ var vm = new Vue( {
             this.isStateSuccess = true;
 
             // check if there is an added new value in the localStoradge
-            if ( isExistAccess( this.project.name ) ) {
+            if ( this.isExistAccess( this.project.name ) ) {
                 var _this = this;
                 setTimeout( function() {
                     _this.isStateSuccess = false;
@@ -96,20 +100,51 @@ var vm = new Vue( {
         searchAccess: function() {
             this.isResult = false;
             this.template = {};
-            if ( isExistAccess( this.searchValue ) ) {
+            if ( this.isExistAccess( this.searchValue ) ) {
                 var result_db = JSON.parse( localStorage.getItem( this.searchValue ) );
-                var i = 0;
-                for ( var key in result_db ) {
 
-                    if ( result_db[ key ] ) {
-                        if ( i == 1 ) this.template[ key ] = '<b>' + this.labels[ i ] + ':</b> ' + '<a href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a>';
-                        else this.template[ key ] = '<b>' + this.labels[ i ] + ':</b> ' + result_db[ key ];
-                        if ( i == 1 || i == 4 || i == 8 || i == 10 ) this.template[ key ] += '<br><br>';
+                if(result_db) {
+
+                    var i = 0;
+                    for ( var key in result_db ) {
+
+                        if ( result_db[ key ] ) {
+                            
+                            if ( this.labels[ i ] === 'Name Project' ) this.template[ key ] = '<td class="bg-danger text-white"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="bg-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
+                            else {
+                                switch(this.labels[ i ]) {
+                                    case 'FTP Server':
+                                    case 'FTP User':
+                                    case 'FTP Pass':
+                                        this.template[ key ] = '<td class="text-light bg-dark"><b>' + this.labels[ i ] + ':</b></td><td class="text-light bg-dark">' + result_db[ key ] + '</td>';
+                                    break;
+
+                                    case 'DB Name':
+                                    case 'DB Server':
+                                    case 'DB User':
+                                    case 'DB Pass':
+                                        this.template[ key ] = '<td class="bg-secondary text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-secondary text-white">' + result_db[ key ] + '</td>';
+                                    break;
+
+                                    case 'CMS User':
+                                    case 'CMS Pass':
+                                        this.template[ key ] = '<td class="bg-success text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-success text-white">' + result_db[ key ] + '</td>';
+                                    break;
+
+                                    case 'HOST Url':
+                                    case 'HOST User':
+                                    case 'HOST Pass':
+                                        this.template[ key ] = '<td class="bg-info text-white"><b>' + this.labels[ i ] + ':</b></td><td class="bg-info text-white">' + result_db[ key ] + '</td>';
+                                    break;
+                                }
+                            }
+                            
+                        }
+                        i++;
                     }
-                    i++;
-                }
 
-                this.isResult = true;
+                    this.isResult = true;
+                }
 
             } else {
 
@@ -125,45 +160,87 @@ var vm = new Vue( {
             resetProjectData( this );
         },
         importAccesses: function() {
-            if(!$('#importArea').val()) return;
-            this.importArea = $('#importArea').val();
-            var importArray = this.importArea.split(', ');
-            importArray.forEach(function(item, i, arr){
-                localStorage.setItem( JSON.parse(item).name, item );
-            });
+            if ( !$( '#importArea' ).val() ) return;
+            this.importArea = $( '#importArea' ).val();
+            var importArray = this.importArea.split( ', ' );
+            importArray.forEach( function( item, i, arr ) {
+                localStorage.setItem( JSON.parse( item ).name, item );
+            } );
         },
-        readFile: function(e) {
-            readSingleFile(e);
+        readFile: function( e ) {
+            this.readSingleFile( e );
         },
         exportAccesses: function() {
             var arr = [];
             for ( var access in localStorage ) {
-                if (localStorage.hasOwnProperty(access))
-                arr.push( localStorage[access] );
+                if ( localStorage.hasOwnProperty( access ) )
+                    arr.push( localStorage[ access ] );
             }
-            $('#exporttArea').val( arr.join(', ') );
+            $( '#exporttArea' ).val( arr.join( ', ' ) );
         },
-        copyToClipboard: function(areaFromCopy) {
-            var copyTextarea = $(areaFromCopy);
+        copyToClipboard: function( areaFromCopy ) {
+            var copyTextarea = $( areaFromCopy );
             copyTextarea.select();
 
             try {
-              var successful = document.execCommand('copy');
-            } catch (err) {
-              console.log('Oops, unable to copy');
+                var successful = document.execCommand( 'copy' );
+            } catch ( err ) {
+                console.log( 'Oops, unable to copy' );
             }
         },
-        saveFile: function(event) {
-            var content = $('#exporttArea').val();
-            function download(text, name, type) {
-              var file = new Blob([text], {type: type});
-              event.target.href = URL.createObjectURL(file);
-              event.target.download = name;
+        saveFile: function( event ) {
+            var content = $( '#exporttArea' ).val();
+
+            function download( text, name, type ) {
+                var file = new Blob( [ text ], { type: type } );
+                event.target.href = URL.createObjectURL( file );
+                event.target.download = name;
             }
-            download(content, 'host_accesses.txt', 'text/plain');
+            download( content, 'host_accesses.txt', 'text/plain' );
         },
-        resetField: function(element) {
-            $(element).text('').val('');
+        resetField: function( element ) {
+            $( element ).text( '' ).val( '' );
+        },
+        /**
+         * Resets the object values
+         * @param  {Object}
+         * @return {nothing}
+         */
+        resetProjectData: function( obj ) {
+            for ( var prop in obj.project ) {
+                obj.project[ prop ] = '';
+            }
+        },
+        /**
+         * Checks for storage access
+         * @param  {string}  name [name access]
+         * @return {Boolean}
+         */
+        isExistAccess: function( name ) {
+            return !!localStorage.getItem( name );
+        },
+        /**
+         * Read and show content locale file
+         */
+        readSingleFile: function( e ) {
+            var file = e.target.files[ 0 ];
+            if ( !file ) {
+                return;
+            }
+            var reader = new FileReader();
+            reader.onload = function( e ) {
+                var contents = e.target.result;
+                this.displayContents( contents );
+            };
+            reader.readAsText( file );
+        },
+        /**
+         * rendering display content file
+         * @param  {string} contents file
+         */
+        displayContents: function( contents ) {
+            var element = document.getElementById( 'importArea' );
+            element.textContent = contents;
         }
     },
     watch: {
@@ -186,56 +263,3 @@ var vm = new Vue( {
         }
     }
 } );
-
-
-/**
- * Resets the object values
- * @param  {Object}
- * @return {nothing}
- */
-function resetProjectData( obj ) {
-    for ( var prop in obj.project ) {
-        obj.project[ prop ] = '';
-    }
-}
-/**
- * Checks for storage access
- * @param  {string}  name [name access]
- * @return {Boolean}
- */
-function isExistAccess( name ) {
-    return !!localStorage.getItem( name );
-}
-
-/**
- * Get keys from locale Storage
- * @return {Array}
- */
-function getListAccess() {
-    var arr = [];
-    for ( var access in localStorage ) arr.push( access );
-    return arr;
-}
-/**
- * Read and show content locale file
- */
-function readSingleFile(e) {
-  var file = e.target.files[0];
-  if (!file) {
-    return;
-  }
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    var contents = e.target.result;
-    displayContents(contents);
-  };
-  reader.readAsText(file);
-}
-/**
- * rendering display content file
- * @param  {string} contents file
- */
-function displayContents(contents) {
-  var element = document.getElementById('importArea');
-  element.textContent = contents;
-}
