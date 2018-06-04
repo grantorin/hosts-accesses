@@ -114,7 +114,7 @@ var vm = new Vue( {
                     for ( var key in result_db ) {
 
                         if ( result_db[ key ] ) {
-                            console.log( result_db[ key ] );
+                            
                             if ( this.labels[ i ] === 'Domain Url' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
                             else {
                                 switch ( this.labels[ i ] ) {
