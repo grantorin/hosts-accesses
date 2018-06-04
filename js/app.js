@@ -20,11 +20,11 @@ var vm = new Vue( {
         importArea: '',
         searchValue: '',
         searchAnswers: [],
-        listAccesses: (function() {
-                    var arr = [];
-                    for ( var access in localStorage ) arr.push( access );
-                    return arr;
-                })(),
+        listAccesses: ( function() {
+            var arr = [];
+            for ( var access in localStorage ) arr.push( access );
+            return arr;
+        } )(),
         project: {
             name: '',
             domain_url: '',
@@ -76,14 +76,19 @@ var vm = new Vue( {
         }
     },
     methods: {
+        getListAccess: function() {
+            var arr = [];
+            for ( var access in localStorage ) arr.push( access );
+            return arr;
+        },
         addAccess: function() {
             if ( this.isExistAccess( this.project.name ) ) {
                 if ( !confirm( 'Access with the name { ' + this.project.name + ' } exists, overwrite it?' ) ) return;
                 localStorage.setItem( this.project.name, JSON.stringify( this.project ) );
-                this.listAccesses = getListAccess();
+                this.listAccesses = this.getListAccess();
             } else {
                 localStorage.setItem( this.project.name, JSON.stringify( this.project ) );
-                this.listAccesses = getListAccess();
+                this.listAccesses = this.getListAccess();
             }
             resetProjectData( this );
 
@@ -103,43 +108,43 @@ var vm = new Vue( {
             if ( this.isExistAccess( this.searchValue ) ) {
                 var result_db = JSON.parse( localStorage.getItem( this.searchValue ) );
 
-                if(result_db) {
+                if ( result_db ) {
 
                     var i = 0;
                     for ( var key in result_db ) {
 
                         if ( result_db[ key ] ) {
-                            console.log(result_db[key]);
+                            console.log( result_db[ key ] );
                             if ( this.labels[ i ] === 'Domain Url' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
                             else {
-                                switch(this.labels[ i ]) {
+                                switch ( this.labels[ i ] ) {
                                     case 'FTP Server':
                                     case 'FTP User':
                                     case 'FTP Pass':
                                         this.template[ key ] = '<td class="text-light bg-dark"><b>' + this.labels[ i ] + ':</b></td><td class="text-light bg-dark">' + result_db[ key ] + '</td>';
-                                    break;
+                                        break;
 
                                     case 'DB Name':
                                     case 'DB Server':
                                     case 'DB User':
                                     case 'DB Pass':
                                         this.template[ key ] = '<td class="alert alert-dark"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-dark">' + result_db[ key ] + '</td>';
-                                    break;
+                                        break;
 
                                     case 'CMS User':
                                     case 'CMS Pass':
                                         this.template[ key ] = '<td class="alert alert-success"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-success">' + result_db[ key ] + '</td>';
-                                    break;
+                                        break;
 
                                     case 'HOST Url':
                                     case 'HOST User':
                                     case 'HOST Pass':
                                         this.template[ key ] = '<td class="alert alert-info"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-info">' + result_db[ key ] + '</td>';
-                                    break;
+                                        break;
 
                                     default:
-                                       this.template[ key ] = '<td class="alert alert-primary"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-primary">' + result_db[ key ] + '</td>'; 
-                                    break;
+                                        this.template[ key ] = '<td class="alert alert-primary"><b>' + this.labels[ i ] + ':</b></td><td class="alert alert-primary">' + result_db[ key ] + '</td>';
+                                        break;
                                 }
                             }
 
