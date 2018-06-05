@@ -14,7 +14,7 @@ var translit = new Vue( {
 } );
 
 /**
- * Test support your browser web ctorage
+ * Test support your browser web storage
  */
 if ( typeof( Storage ) === "undefined" ) {
     alert( "Sorry, your browser does not support web storage..." );
@@ -50,8 +50,10 @@ var vm = new Vue( {
         },
 
         isResult: false,
+        isImportAccesses: false,
         isAnswerRezult: false,
         isStateSuccess: false,
+        isFileOnLoad: false,
         hasSearchError: false,
 
         listMatchWithSearch: [],
@@ -182,9 +184,11 @@ var vm = new Vue( {
             importArray.forEach( function( item, i, arr ) {
                 localStorage.setItem( JSON.parse( item ).name, item );
             } );
+            this.isImportAccesses = true;
         },
         readFile: function( e ) {
             this.readSingleFile( e );
+            this.isFileOnLoad = true;
         },
         exportAccesses: function() {
             var arr = [];
@@ -243,10 +247,11 @@ var vm = new Vue( {
             if ( !file ) {
                 return;
             }
+            var _this = this;
             var reader = new FileReader();
             reader.onload = function( e ) {
                 var contents = e.target.result;
-                this.displayContents( contents );
+                _this.displayContents( contents );
             };
             reader.readAsText( file );
         },
@@ -276,6 +281,6 @@ var vm = new Vue( {
                 if ( this.listMatchWithSearch.length )
                     this.isAnswerRezult = true;
             }
-        }
+        },
     }
 } );
