@@ -13,6 +13,13 @@ var translit = new Vue( {
     }
 } );
 
+/**
+ * Test support your browser web ctorage
+ */
+if ( typeof( Storage ) === "undefined" ) {
+    alert( "Sorry, your browser does not support web storage..." );
+    throw "stop";
+}
 
 var vm = new Vue( {
     el: '#app',
@@ -90,7 +97,7 @@ var vm = new Vue( {
                 localStorage.setItem( this.project.name, JSON.stringify( this.project ) );
                 this.listAccesses = this.getListAccess();
             }
-            resetProjectData( this );
+            this.resetProjectData( this );
 
             this.isStateSuccess = true;
 
@@ -114,7 +121,7 @@ var vm = new Vue( {
                     for ( var key in result_db ) {
 
                         if ( result_db[ key ] ) {
-                            
+
                             if ( this.labels[ i ] === 'Domain Url' ) this.template[ key ] = '<td class="alert alert-danger"><b>' + this.labels[ i ] + ':</b></td>' + '<td class="alert alert-danger"><a class="text-dark" href="' + result_db[ key ] + '" target="_blank" rel="noopener">' + result_db[ key ] + '</a></td>';
                             else {
                                 switch ( this.labels[ i ] ) {
@@ -166,7 +173,7 @@ var vm = new Vue( {
             }
         },
         resetFields: function() {
-            resetProjectData( this );
+            this.resetProjectData( this );
         },
         importAccesses: function() {
             if ( !$( '#importArea' ).val() ) return;
