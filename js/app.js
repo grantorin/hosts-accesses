@@ -111,6 +111,11 @@ var vm = new Vue( {
                 }, 3000 );
             }
         },
+        removeAccess: function() {
+            if ( !confirm( 'Confirm the deletion?' ) ) return;
+            localStorage.removeItem( this.searchValue );
+            this.isResult = false;
+        },
         searchAccess: function() {
             this.isResult = false;
             this.template = {};
@@ -180,10 +185,12 @@ var vm = new Vue( {
         importAccesses: function() {
             if ( !$( '#importArea' ).val() ) return;
             this.importArea = $( '#importArea' ).val();
-            var importArray = this.importArea.split( ', ' );
-            importArray.forEach( function( item, i, arr ) {
-                localStorage.setItem( JSON.parse( item ).name, item );
-            } );
+            var importObj = JSON.parse(this.importArea);
+            for ( var access in importObj ) {
+                if ( importObj.hasOwnProperty( access ) ) {
+                    localStorage.setItem( access, JSON.stringify(importObj[access]) );
+                }
+            }
             this.isImportAccesses = true;
         },
         readFile: function( e ) {
@@ -193,10 +200,12 @@ var vm = new Vue( {
         exportAccesses: function() {
             var arr = [];
             for ( var access in localStorage ) {
-                if ( localStorage.hasOwnProperty( access ) )
-                    arr.push( localStorage[ access ] );
+                if ( localStorage.hasOwnProperty( access ) ) {
+                    arr.push( '"' + access + '":' + localStorage[ access ] );
+                }
             }
-            $( '#exporttArea' ).val( arr.join( ', ' ) );
+            console.table(arr);
+            $( '#exporttArea' ).val( '{' + arr.join( ', ' ) + '}' );
         },
         copyToClipboard: function( areaFromCopy ) {
             var copyTextarea = $( areaFromCopy );

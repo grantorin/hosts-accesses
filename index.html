@@ -10,7 +10,7 @@
         body, html { height: 100%; }
         body { opacity: 0; transition: opacity .1s;}
         .trans { -webkit-transition: .3s; -moz-transition: .3s; -ms-transition: .3s; -o-transition: .3s; transition: .3s; }
-        /*.search__btn:not(:last-child) {border-right: 1px solid rgba(0,0,0,.15); }*/
+        /*.search_answers, .search_answers__item {width: 100%; display: block;}*/
     </style>
 </head>
 
@@ -48,6 +48,9 @@
                         <tr v-for="temp in template" v-html="temp"></tr>
                     </tbody>
                 </table>
+                <div class="text-right">
+                    <button class="btn btn-danger" v-on:click="removeAccess">Delete</button>
+                </div>
             </div>
             <div class="alert alert-danger text-center" role="alert" v-if="hasSearchError">
                 <button type="button" class="close" v-on:click="hasSearchError = !hasSearchError" aria-label="Close"><span aria-hidden="true">&times;</span></button>
