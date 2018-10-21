@@ -29,7 +29,10 @@ var vm = new Vue( {
         searchAnswers: [],
         listAccesses: ( function() {
             var arr = [];
-            for ( var access in localStorage ) arr.push( access );
+            for ( var access in localStorage ) {
+                if ( !localStorage.hasOwnProperty( access ) ) continue;
+                arr.push( access );
+            }
             return arr;
         } )(),
         project: {
@@ -185,10 +188,10 @@ var vm = new Vue( {
         importAccesses: function() {
             if ( !$( '#importArea' ).val() ) return;
             this.importArea = $( '#importArea' ).val();
-            var importObj = JSON.parse(this.importArea);
+            var importObj = JSON.parse( this.importArea );
             for ( var access in importObj ) {
                 if ( importObj.hasOwnProperty( access ) ) {
-                    localStorage.setItem( access, JSON.stringify(importObj[access]) );
+                    localStorage.setItem( access, JSON.stringify( importObj[ access ] ) );
                 }
             }
             this.isImportAccesses = true;
@@ -204,7 +207,7 @@ var vm = new Vue( {
                     arr.push( '"' + access + '":' + localStorage[ access ] );
                 }
             }
-            console.table(arr);
+            console.table( arr );
             $( '#exporttArea' ).val( '{' + arr.join( ', ' ) + '}' );
         },
         copyToClipboard: function( areaFromCopy ) {

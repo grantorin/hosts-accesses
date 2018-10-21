@@ -523,27 +523,9 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 10137,
+				"buffer_size": 10408,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 14771,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Updates were rejected because the tip of your current branch is behind its remote counterpart. Integrate the remote changes (e.g. 'git pull ...') before pushing again.",
-			"settings":
-			{
-				"buffer_size": 167,
-				"line_ending": "Windows",
-				"name": "Updates were rejected because the tip of your curr"
 			}
 		}
 	],
@@ -558,6 +540,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
 			[
 				"pc",
 				"Package Control: List Packages"
@@ -615,10 +605,6 @@
 				"git: branch"
 			],
 			[
-				"sftp",
-				"SFTP: Edit Server…"
-			],
-			[
 				"pcI",
 				"Package Control: Install Package"
 			],
@@ -653,10 +639,6 @@
 			[
 				"tri",
 				"Trimmer: Trim trailing whitespace."
-			],
-			[
-				"sft",
-				"SFTP: Browse Server…"
 			],
 			[
 				"min",
@@ -829,13 +811,19 @@
 	],
 	"file_history":
 	[
+		"/C/Users/grantorino/AppData/Local/Temp/fz3temp-2/functions.php",
+		"/C/Users/grantorino/AppData/Local/Temp/fz3temp-2/index.php",
 		"/C/Users/grantorino/Dropbox/main-gulp-sass/gulpfile.js",
+		"/C/Users/grantorino/Dropbox/main-gulp-sass/.gitignore",
+		"/E/OpenServer/OSPanel/domains/calypso/src/css/style.css",
+		"/C/Users/grantorino/Dropbox/vue/js/app.js",
+		"/C/Users/grantorino/Dropbox/vue/README.md",
+		"/C/Users/grantorino/Dropbox/vue/.gitignore",
 		"/C/Users/grantorino/Dropbox/vue/index.html",
 		"/C/Users/grantorino/Desktop/search (1).svg",
 		"/C/Users/grantorino/Desktop/SVG/search.svg",
 		"/C/Users/grantorino/Dropbox/addUser.php",
 		"/C/Users/grantorino/Dropbox/vue/js/transliteration.min.js",
-		"/C/Users/grantorino/Dropbox/vue/.gitignore",
 		"/C/Users/grantorino/Dropbox/config/accesses_sites.json",
 		"/E/Programs/Sublime Text 3/Data/Packages/User/HaoGist/js_read_local_file.html",
 		"/E/Programs/Sublime Text 3/Data/Packages/User/HaoGist/js_read_local_file.js",
@@ -950,13 +938,7 @@
 		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/map-floor5_2.php",
 		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/infastrucrura.php",
 		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/footer.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-8.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-7.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-6.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-5.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-4.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-3.php",
-		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-12.php"
+		"/C/Users/redch/AppData/Local/Temp/_tcx/0/1/park-land.com.ua/wp-content/themes/moesia/section-8.php"
 	],
 	"find":
 	{
@@ -974,6 +956,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"JSON",
 			"512",
 			"resetProjectData",
 			"isStateSuccess",
@@ -1069,7 +1052,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1078,168 +1061,63 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10137,
+						"buffer_size": 10408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								799,
+								799
 							]
 						],
 						"settings":
 						{
-							"SL.20.region_keys":
+							"SL.100.region_keys":
 							[
-								"SL.jshint.Highlights.|e19bf2e728a8c792c1b8c2728e2474f83e0bb4514b6b36ed38f7c35a7d8e635f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|d5e50eb6c42fad33bb538159527cd49ae26dfbd98b5753c303094fefef5f86f9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.jshint.Highlights.|08f977cc43c8c6cab577af7fa6cad592dedca4e07feab770b3cac0ad9c745c12|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|57f71dd7134c186e84367419c4f443e95ff6c48c77aec942cb06f2129c26a336|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|7ec6d5d28f302657dbe275495c7f92d8e683914cb80119052948cd0ff4acb01f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|97273dea315ca3cc5736b1e87b408dddc57bda10d871cea647c0aa2605fb6419|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|0a3fe05fc0221e077359e46d5a0de4c6e8dc1132ec1a42359dc3b99f86defce5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|c8798b60a964fde3537a288bda0fc64f62026e1c50ed758ec8f93b4751f94049|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|70f3be753596142f384de8731eb8318fde989b4d00d0c5c3468c488f92bef7bc|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|84f6799cfe593113a422c14c4f055e795c7d87f76bb4c2ab4697f32ba97303f2|region.yellowish markup.warning.sublime_linter|32",
-								"sublime_linter.protected_regions",
-								"SL.jshint.Highlights.|45d6d887c24a390613fa065d8be6fae16415053f33048959459b05b8fd9c0b08|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|b971d5d240b0f6fabeeb47cfbe544c58e768c3c815b2419eac919c0cbda673b2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|ea60d5fe309058386949bd90a627730ddff0d452f48452f62d8509d5396a194e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|3f464c177116186d84bec0b03389d13136acdc519e5094d9d7354bdae038c2ba|region.yellowish markup.warning.sublime_linter|32",
 								"SL.jshint.Highlights.|7fab419cabff833df1fcfd4f8f4ee971d25eeb0da8177494057c9026461c3761|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|f99cc7f14565300e203f1a116f9130cc36f43519042ff3713d7543d3eb48ad99|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|f2a20590ff198da719145fab5ecfc0768373625680b7f26c87e1f2f4c87ef7f6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|7496699b23c8fb6b06190f7f0a83226f03e3de9a1d17267268c001cc2433ea47|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|5fbe0d77929987796035114b4cb622e8e955fa72d6cb40524da7b820c25a319e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|a4a2637fed9e7b2bef94930a069b86820781a26513c1e0f5b57bcb56f0d59ad3|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|ff945b3c9476bb2c3d7c3bdba49b8c9d42d1de8b0dac84f2934d34fdd3bab197|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|2669fe6ce17d30be95af401d313cdfbee32103b123839d85347fd22f103d9688|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|89b2c54e858d987310b356404d8ee7b42acb6dc736eb4682854b2893aced35cc|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|2f4e832de9db6c34f3d60e9659944ad3cefc868b23b4e074a13b54547ae089a9|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|4eef8b050e2ec0f326ee43a06907d435ef448cf781ea11b536a6940b838dce2a|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|a5622ab8a1b00779b2e1cfa56a8739ef57ceb8c5319bbb82cdd681764d3a2111|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|7cdd7926ea08f323523b086dd8f66a8c5d3a634485dcbea8f9e3e62d75bcd4a7|region.yellowish markup.warning.sublime_linter|32",
 								"SL.jshint.Highlights.|9285389ad4a044ca9313672bb7c736427d6ed1c88aef591da39afc601d158f5a|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|ddae96c4bc5b8e6c01487acbb66bd7b626734e1162fc5149dd532af0cb04de34|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|364155ef7f989f39cbda662ca831dca0b96a313f9c0a4567a1822fbbb34facb2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|83a502624c7227ab45fa56dfd61feb309f28be0f4d3d5dfa062eb2d3cd6852b4|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|f887111f011af6774fa37428a64e08064071e277356b8a2d735418f98d47c8de|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|6b770c35429b2d4916a4fcc5ef3150cb021e4e10c96a7498cfd78eb20174f553|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|24e24d531c4899318cbb585d7a7b4635dcc2f392a6d5230c824d11ae59638e07|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|df7627106359384c467ec4017bc175d2a8aed42be6c4457109fcf3a7110129fe|region.yellowish markup.warning.sublime_linter|32",
 								"SL.jshint.Highlights.|3f5448ec4e5646ebb5ebef73d144344f8026d8c049bbec1e91cf79b0fe0f76c3|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|5571634ffd03ee9fd86b42e5341ba5aa91db3817f72fb2efaad9402fae43fb53|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|8a9188e3e4b9979bae2097d21447c753713226ad7729646afc405719be430201|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|3bf3eecf7a05359096ded6e72c1b43ff3a0769479340fb0d9d54afcc8e5e42c5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|f602b9939d0b0b17fc53ffa36d51d46cacb983b2aa1f565af2a238c5b3136698|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|04af17d51241517239ad5a323290aa2042d46359b7d9bb54e35bacab2de7cfa4|region.yellowish markup.warning.sublime_linter|32",
 								"SL.jshint.Highlights.|f14a531e5230fbf8cbedfe7151a8b1b3d66a954370a73c9b381683d1ccb77f44|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|fa049dba29d5abc48171e2c83e91d2313d717fb5c9b06481218d8bc5a0877197|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|97c0c589752d407351ac1c97b72caca0844787ee326919efb1cbb7dd0a2f6c37|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|6bb20c52b5b153fab2b77729bce37e54b2461be7765a4bce781a0b075d78e1a8|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|5afc6e95a9d8aa778983848ec1ce4de48a7731a13e812865237c8ec66e33e623|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|178071039d5e9eefdc4c46f5d85e8e63585e9c783251be74dbf8dec920a458ce|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|351184a30a3fa2b0494457c3a5e94740ed8c2e86e06f1ae0f1fc16a02944032e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|4c297386b7381e363bfe2f7840d5ecde8167cc6bfba073e4bc36caa62f196487|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|e4297aef6ccc700d5cc22d3b54d6b10608b052181e5b477e42c34781a71dc5ab|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.34.region_keys":
-							[
-								"SL.jshint.Highlights.|83a502624c7227ab45fa56dfd61feb309f28be0f4d3d5dfa062eb2d3cd6852b4|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|9285389ad4a044ca9313672bb7c736427d6ed1c88aef591da39afc601d158f5a|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|0a3fe05fc0221e077359e46d5a0de4c6e8dc1132ec1a42359dc3b99f86defce5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|364155ef7f989f39cbda662ca831dca0b96a313f9c0a4567a1822fbbb34facb2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|57f71dd7134c186e84367419c4f443e95ff6c48c77aec942cb06f2129c26a336|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.jshint.Highlights.|3f5448ec4e5646ebb5ebef73d144344f8026d8c049bbec1e91cf79b0fe0f76c3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|f99cc7f14565300e203f1a116f9130cc36f43519042ff3713d7543d3eb48ad99|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|7ec6d5d28f302657dbe275495c7f92d8e683914cb80119052948cd0ff4acb01f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|ea60d5fe309058386949bd90a627730ddff0d452f48452f62d8509d5396a194e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|47763e7a77dfa3bc4341f6dc2fe9be4b46b83e6fd6a1a2ce98ce6af0f624ff58|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|3c960f3eb06a1e3192cbff9bdf97a340fa92b006fbfd3be26331cb8cb6498795|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|5856d55d908f1a367d015fe8b18f426e29ccac631d4c099e67d0230ab398a4e1|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|69e1760be761e935512dd452c3ff32b4361b8347cb799399485ba542ee6660c7|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.jshint.Highlights.|c8798b60a964fde3537a288bda0fc64f62026e1c50ed758ec8f93b4751f94049|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|08f977cc43c8c6cab577af7fa6cad592dedca4e07feab770b3cac0ad9c745c12|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|fa049dba29d5abc48171e2c83e91d2313d717fb5c9b06481218d8bc5a0877197|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|b971d5d240b0f6fabeeb47cfbe544c58e768c3c815b2419eac919c0cbda673b2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|97273dea315ca3cc5736b1e87b408dddc57bda10d871cea647c0aa2605fb6419|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|45d6d887c24a390613fa065d8be6fae16415053f33048959459b05b8fd9c0b08|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|5afc6e95a9d8aa778983848ec1ce4de48a7731a13e812865237c8ec66e33e623|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|d5e50eb6c42fad33bb538159527cd49ae26dfbd98b5753c303094fefef5f86f9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|f14a531e5230fbf8cbedfe7151a8b1b3d66a954370a73c9b381683d1ccb77f44|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|178071039d5e9eefdc4c46f5d85e8e63585e9c783251be74dbf8dec920a458ce|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|84f6799cfe593113a422c14c4f055e795c7d87f76bb4c2ab4697f32ba97303f2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|e4297aef6ccc700d5cc22d3b54d6b10608b052181e5b477e42c34781a71dc5ab|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|6bb20c52b5b153fab2b77729bce37e54b2461be7765a4bce781a0b075d78e1a8|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|e19bf2e728a8c792c1b8c2728e2474f83e0bb4514b6b36ed38f7c35a7d8e635f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|7fab419cabff833df1fcfd4f8f4ee971d25eeb0da8177494057c9026461c3761|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|4c297386b7381e363bfe2f7840d5ecde8167cc6bfba073e4bc36caa62f196487|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|70f3be753596142f384de8731eb8318fde989b4d00d0c5c3468c488f92bef7bc|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|6d1c7cc5134c64907e8d308d32a4ae211eb328e04d2de28c285186696e57b848|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|f99cc7f14565300e203f1a116f9130cc36f43519042ff3713d7543d3eb48ad99|region.yellowish markup.warning.sublime_linter|32",
 								"SL.jshint.Highlights.|ddae96c4bc5b8e6c01487acbb66bd7b626734e1162fc5149dd532af0cb04de34|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|f887111f011af6774fa37428a64e08064071e277356b8a2d735418f98d47c8de|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|97c0c589752d407351ac1c97b72caca0844787ee326919efb1cbb7dd0a2f6c37|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|6b770c35429b2d4916a4fcc5ef3150cb021e4e10c96a7498cfd78eb20174f553|region.yellowish markup.warning.sublime_linter|32",
-								"SL.jshint.Highlights.|351184a30a3fa2b0494457c3a5e94740ed8c2e86e06f1ae0f1fc16a02944032e|region.yellowish markup.warning.sublime_linter|32"
+								"SL.jshint.Highlights.|70f3be753596142f384de8731eb8318fde989b4d00d0c5c3468c488f92bef7bc|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|2eefcce352193892303d986de417069a3e69ee7d717bfba15ee3479ee50655c6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|364155ef7f989f39cbda662ca831dca0b96a313f9c0a4567a1822fbbb34facb2|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|98292dd00379d8e1a6ea3a8e95e1fb8aa8289062db485f7dae7c658c887f0454|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Highlights.|fcd1b1695bf07f3cccf7863ebc4a934f96fd0d59a4cd1af3a64d2e3552044711|region.yellowish markup.warning.sublime_linter|32",
+								"SL.jshint.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
 							],
 							"auto_complete": false,
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"bracket_highlighter.locations":
 							{
 								"close":
 								{
@@ -1269,38 +1147,13 @@
 								{
 								}
 							},
-							"bracket_highlighter.regions":
+							"bracket_highlighter.clone_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1311,16 +1164,129 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										828,
+										829
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										597,
+										598
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1329,7 +1295,6 @@
 							],
 							"git_savvy.repo_path": "C:\\Users\\grantorino\\Dropbox\\vue",
 							"incomplete_sync": null,
-							"is_xml": false,
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
@@ -1337,398 +1302,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"SL.34.region_keys":
-							[
-								"SL.htmltidy.Highlights.|a02be233d975e4715a39a062cb5fa5193297806aee92852707c030771933d983|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|c3e5b51def09baaa3514df1da1da3390352ee0bb36e182db26b93543710411a2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|b276233eb41e4d3187cfc308f6d460b7f383b2b73591136b4c0f7307e3f4c751|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|50ff06cdd8979b603884e11cd31f6005281fd59556724f1989502b5dc46a8117|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|1e1736a451305d32a313a2f08a425238b95b6114e467d7579619fc93edce671f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|4d2b0fb1ad6257aa8577b9a7503e5bc9beecde8ee915dccf8761a65aec865861|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|46f60e4ae17bdb1810855e2f9dc8ace9979bb41335557637d95fc18684ace7de|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|3bdb17341fcefdac3dfd18e39e46024970f98a9c676c36a0f9375ce6f39e2e08|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|e7f8247287b86454a0e045165efcd08d87c5b37f293a3c1a9d20eb99cadccab7|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|02c1287ea12a531ce55335d40169dd4543f3c08bad2d8ad71c760cb2684e7b8e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|53929242f811b6689f59a608dcc1c51e4c2f348a0166c5a7a16783c9e201da75|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|1d1deda048b9d186b35690fd28f8c67eac3d9780d2fbed3d7cfc5ebc408eea1e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|3ad87b4f849df83644b22bcaa6c9115a28d77f65db35ce142e8da97e92cf6a2c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|902757f20f34d7a3e0f9e6f53b56323217b713f03fb484238aae954e2510076c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|5f4d3ccd24f3de7a16980dcad3aa3112a9a14f356ed5cde59910107732d5fa8b|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|ba6a8dab36798a1e775ef533a96e3eb828b0926118eecff6f494b654a978ca86|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|c0aabdda697e980d2e15a18073e60914684298fe8d6d9fca17c0a3ecd34b84db|region.yellowish markup.warning.sublime_linter|32",
-								"sublime_linter.protected_regions",
-								"SL.htmltidy.Highlights.|6a0bb40dd29d8d55d4e48d4bc53c8e9c180a23a28af9f3bb64cf6bc97871ef8c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|dfd71ef105cc1533d8bb80540f6725d305c08c596ddbe697d7925201890fbc45|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|6814e0cafc4ee47e351495c747da1e2e8bcb4b6be02bd606cbd0353755fe3252|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|c26390f3c722041769c1637d818b7b1c56dd9c5057a46dd05195dba1feedc3bb|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|e3f9197f6399fb2124700580345c43679ea23da53f3ebc0834c10ed21d7cd00e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|dfe004baae407ea50383ebc809fdd7247bb997ed2b7ba7f971f1c780a4cf2a03|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.htmltidy.Highlights.|573c175ee5418a232195f9d9bb62dc8da58b427761e63b4be40cd9e8bd760257|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|df89761e9d5acd11c05162e219b0ac524e5dfc8c5728d7101636d7d8c3742a90|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d96d237ce2687e847e345a03729b8d37e2a10c2856957b058528896e27220d9d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|e1f04312412941abdc972837fd5fb615bca1555b6f028a1b8735a77514692f4b|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|44d800837ec7f602913bd759f17a397cfe10b779999d8766d479b1fef7a4c090|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|53ef7561950f464390b11a4bdb838a78d6ce48a2afea487e9aa2472011864ebd|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|6e65aeeeb530c0a1cdb656af2e5d58f68bb649675a8889001f56a36d18b29cb9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|9232867b9c71d9d54a3b69c178f60e22cf6835e1274bccd193bd81655ba363ff|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|41c2c0b820b501adc66f947d57a84176ff56298ac8489b31dc5e688951eac9ac|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|6de5b49476809207eb7f4856de4ef020f84629270e2450de5434594cba775002|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|1fef9f2cfedfbc903131bd77f73983f41afc871acc13706e21538714686930ba|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d111c9d520324952ed2179e2b1cfb02ce1e065d10ca6bd996f5fe89ceaff2adb|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.41.region_keys":
-							[
-								"SL.htmltidy.Highlights.|02c1287ea12a531ce55335d40169dd4543f3c08bad2d8ad71c760cb2684e7b8e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|deb7e22776d587de0ee104b65f0a420e210409fb16845c6885536f92dc42da3c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|cc21d279932def2f1000fadd6baafd6689008614a9ac7f6397041d24b63ee9c9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|fd0468eaa01f00bea10310434f69cd9ad8fada58cc7aae03cc917440795244d0|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|df89761e9d5acd11c05162e219b0ac524e5dfc8c5728d7101636d7d8c3742a90|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|9b08703d051b82cd2df20fad517df8f83365e303ed36558d1df3f7b013cf77de|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|6a0bb40dd29d8d55d4e48d4bc53c8e9c180a23a28af9f3bb64cf6bc97871ef8c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|50ff06cdd8979b603884e11cd31f6005281fd59556724f1989502b5dc46a8117|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|e3f9197f6399fb2124700580345c43679ea23da53f3ebc0834c10ed21d7cd00e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d96d237ce2687e847e345a03729b8d37e2a10c2856957b058528896e27220d9d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|634ce4b3d767910373045ae3d60014b8cec723b6164c4b3470dd8261e4a0cab2|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|f0628e1931b93f859d4840abd98f3f8e3fa8d18469f6d0d0605fd09e3830476d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.htmltidy.Highlights.|692e4450a3567749a3c58ffa338f7026e2cca18edebad457f464ffc26d6837b9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|f8e38d9e7f37e1c07a6e7bd7b817b5563f3c8bc9d1bc82b9a0e719d4c48c81a9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|154da5473018d1be9c017155a0dd059842d706776378b951f7ebb4c459b5cbf4|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|b97f22bd775bd6ba41fcdb34dd7e4bfb6bcd6e29dd78942dce409b8b6d8a8ef7|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|4ccb5f9458aaa9d47e9aea381b118391c0f5fa3ca1e85241eba24eb2db09bd0c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|a3471347b48b429ad75e9fe495cd9902c5d8bb4226b637a66dbed29bff68d6fc|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|97e2b09efbe6e4352a07d941937c7a376ff355ad1a08c7959ae6c1a387850d4b|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|ccffb99eea734bceab85fc4d5779695345be19243b9a2a1050ce91ccb7c0fa34|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|a02be233d975e4715a39a062cb5fa5193297806aee92852707c030771933d983|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|49d8f446a4a271a9b87ae4a21355ca35744e483b572dbab65e6f3e61a3aa10d5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|40b5d19f84fcaa7cc72adf5a5d7b276a0714f1e7e8328e68d3851719002324f5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|f41ce685b0f2cad193147545aee1e3315976b42ead5ee4eca04543a35c3dbbe7|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|6e65aeeeb530c0a1cdb656af2e5d58f68bb649675a8889001f56a36d18b29cb9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|a12f5bd678299cc4c93b0fecdaa97fccb6405aa2203c33ad797957288de7ff03|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|b276233eb41e4d3187cfc308f6d460b7f383b2b73591136b4c0f7307e3f4c751|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|eac23a8a2fa17f5305946af01313bb8d7e5d584480320414c283868a54fcb944|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|a9e6ce0ef62e63eae3001c3c277c378faba9415becda3998c5be97c9b9a49704|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d111c9d520324952ed2179e2b1cfb02ce1e065d10ca6bd996f5fe89ceaff2adb|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|e1118aad48b0e955180c3930e2e7d1c1b6f50a3645b1f17df0e97537dc176621|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d65f92749b58e844e8b03f18d843bc371033d259119cf9caed78fa1841d9d6ae|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|a33fca9d8485ddf5b4f2a67d2a1ac38e043a7a6ce5eb383839aa0d1d755bf2c5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|cf3b40bc1a56a426ff2b7f03549a8ae716641f447bb2f1ec9afae33861a833e3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|9a86ca9892d2bff91ae293eccdbb34aa1b1898ce5b392efbd2a928a1d30aa9d5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|00247d781adc8d18e81a4592be068f392b813897a6641fcefafe4a8279743486|region.yellowish markup.warning.sublime_linter|32",
-								"sublime_linter.protected_regions"
-							],
-							"auto_complete": true,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": 41,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										14,
-										15
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/angle_bracket.png",
-										"region.orangish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										0,
-										1
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"git_savvy.repo_path": "C:\\Users\\grantorino\\Dropbox\\vue",
-							"incomplete_sync": null,
-							"is_xml": false,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1075.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 167,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Updates were rejected because the tip of your curr",
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"default_dir": "C:\\Users\\grantorino\\Dropbox\\vue",
-							"incomplete_sync": null,
-							"is_xml": false,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 80.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1832,9 +1409,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "fri",
 		"selected_items":
 		[
+			[
+				"fri",
+				"E:\\OpenServer\\OSPanel\\domains\\feao\\feaonewdesign.sublime-project"
+			],
 			[
 				"",
 				"E:\\OpenServer\\OSPanel\\domains\\cleanfilter\\cleanfilter.sublime-project"
