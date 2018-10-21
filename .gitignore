@@ -1,6 +1,6 @@
+dist/
 node_modules/
 vue.sublime-project
 vue.sublime-workspace
-host-access.sublime-workspace
-host-access.sublime-project
-index2.html
+host-access2.sublime-workspace
+host-access2.sublime-project
